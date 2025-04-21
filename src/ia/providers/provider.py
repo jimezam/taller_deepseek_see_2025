@@ -3,12 +3,9 @@ from src.config import Config
 from openai import OpenAI
 
 class Provider(ABC):
-    config: dict
-    _temperature: float = 1.0
-    _max_tokens: int = 4092
-
-    def __init__(self, config):
-        self.config = config
+    def __init__(self):
+        self._temperature: float = 1.0
+        self._max_tokens: int = 4092
 
     @property
     def temperature(self) -> float:

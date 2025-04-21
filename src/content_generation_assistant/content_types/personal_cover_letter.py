@@ -45,4 +45,4 @@ que la carta sea única y no una plantilla genérica. No incluyas notas al pie,
 ni referencias a otros documentos o información adicional."""
 
     def get_preferred_temperature(self) -> int:
-        return 0
+        return 0.7

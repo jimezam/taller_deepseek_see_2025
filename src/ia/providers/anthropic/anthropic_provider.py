@@ -3,8 +3,8 @@ import anthropic
 from openai import OpenAI
 
 class AnthropicProvider(Provider):
-    def __init__(self, config):
-        super().__init__(config)
+    def __init__(self):
+        super().__init__()
 
     def get_provider_name(self):
         return "ANTHROPIC"

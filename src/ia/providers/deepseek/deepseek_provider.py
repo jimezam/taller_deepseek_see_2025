@@ -1,10 +1,9 @@
 from src.ia.providers.provider import Provider
 from openai import OpenAI
 
-
 class DeepSeekProvider(Provider):
-    def __init__(self, config):
-        super().__init__(config)
+    def __init__(self):
+        super().__init__()
 
     def get_provider_name(self):
         return "DEEPSEEK"

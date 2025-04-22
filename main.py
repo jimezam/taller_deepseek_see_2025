@@ -5,6 +5,7 @@ from src.ia.providers.anthropic.anthropic_provider import AnthropicProvider
 from src.content_generation_assistant.assistant import Assistant
 from src.content_generation_assistant.content_types.personal_cover_letter import PersonalCoverLetter
 from src.content_generation_assistant.content_types.source_code import SourceCode
+from src.content_generation_assistant.content_types.tiktok_script import TiktokScript
 
 def main():
     provider:Provider = DeepSeekProvider()
@@ -12,16 +13,19 @@ def main():
     # provider:Provider = AnthropicProvider()
 
     prompt: str = """
-        Crea un programa en Rust que le pida al usuario los siguientes valores:
-        valor de la cuenta del restaurante, valor del impuesto, porcentaje de propina
-        y cantidad de personas. El programa debe mostrar el valor total de la cuenta real,
-        el valor total de la cuenta con el impuesto y el valor que le corresponde pagar
-        a cada persona.
+        Mostrar de forma atractiva la vida de un ingeniero de sistemas.
+        Incluir escenas visuales dinámicas (como trabajar con código, reuniones,
+        resolver problemas, etc.), y debe usar sonidos o música que estén en tendencia.
+        El tono debe ser inspirador pero accesible, mostrando que la ingeniería de
+        sistemas no es solo técnica, sino también creativa y emocionante.
+        Finaliza con una llamada a la acción que invite a estudiar esta profesión.
+        El contenido debe ser adecuado para jóvenes que están eligiendo qué carrera
+        seguir.
     """
 
     text: str = Assistant.generate(
         provider,
-        SourceCode(),
+        TiktokScript(),
         prompt
     )
 
@@ -57,4 +61,13 @@ if __name__ == "__main__":
     #     que hacer mucho porque siempre tengo sueño. Sin embargo, las pocas horas en que estoy
     #     despierto soy un prolífico desarrollador que crea código limpio basado en patrones y
     #     buenas prácticas de software.
+    # """
+
+
+    #     prompt: str = """
+    #     Crea un programa en Rust que le pida al usuario los siguientes valores:
+    #     valor de la cuenta del restaurante, valor del impuesto, porcentaje de propina
+    #     y cantidad de personas. El programa debe mostrar el valor total de la cuenta real,
+    #     el valor total de la cuenta con el impuesto y el valor que le corresponde pagar
+    #     a cada persona.
     # """

@@ -21,7 +21,7 @@ class ContentType(ABC):
         pass
 
     @abstractmethod
-    def get_preferred_temperature(self) -> int:
+    def get_preferred_temperature(self) -> float:
         pass
 
     @abstractmethod

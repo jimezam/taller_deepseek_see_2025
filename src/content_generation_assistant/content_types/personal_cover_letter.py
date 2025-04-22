@@ -44,5 +44,5 @@ profesional y evita jerga o tecnicismos innecesarios. Además, asegúrate de
 que la carta sea única y no una plantilla genérica. No incluyas notas al pie,
 ni referencias a otros documentos o información adicional."""
 
-    def get_preferred_temperature(self) -> int:
+    def get_preferred_temperature(self) -> float:
         return 0.7

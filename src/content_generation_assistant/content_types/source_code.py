@@ -15,6 +15,10 @@ class SourceCode(ContentType):
 
     def get_example(self) -> str:
         return """
+            Crear un programa en Python que le pida al usuario un valor entero y a partir
+            de el, calcule la suma de todos los números pares y la multiplicatoria de
+            todos los numeros impares, desde 0 hasta el número ingresado.
+            El programa debe mostrar el resultado en pantalla.
         """
 
     def get_context(self) -> str:
@@ -28,5 +32,5 @@ class SourceCode(ContentType):
             y que compile y ejecute sin errores.
         """
 
-    def get_preferred_temperature(self) -> int:
+    def get_preferred_temperature(self) -> float:
         return 0

@@ -3,6 +3,8 @@ from src.config import Config
 from openai import OpenAI
 
 class Provider(ABC):
+    MAX_TEMPERATURE: int = -1
+
     def __init__(self):
         self._temperature: float = 1.0
         self._max_tokens: int = 4092

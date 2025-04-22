@@ -6,6 +6,7 @@ from src.content_generation_assistant.assistant import Assistant
 from src.content_generation_assistant.content_types.personal_cover_letter import PersonalCoverLetter
 from src.content_generation_assistant.content_types.source_code import SourceCode
 from src.content_generation_assistant.content_types.tiktok_script import TiktokScript
+from src.content_generation_assistant.content_types.short_love_poem import ShortLovePoem
 
 def main():
     provider:Provider = DeepSeekProvider()
@@ -13,19 +14,17 @@ def main():
     # provider:Provider = AnthropicProvider()
 
     prompt: str = """
-        Mostrar de forma atractiva la vida de un ingeniero de sistemas.
-        Incluir escenas visuales dinámicas (como trabajar con código, reuniones,
-        resolver problemas, etc.), y debe usar sonidos o música que estén en tendencia.
-        El tono debe ser inspirador pero accesible, mostrando que la ingeniería de
-        sistemas no es solo técnica, sino también creativa y emocionante.
-        Finaliza con una llamada a la acción que invite a estudiar esta profesión.
-        El contenido debe ser adecuado para jóvenes que están eligiendo qué carrera
-        seguir.
+        Nombre de mi novia: Vaca Neria
+        Ella es muy pequeñita, amable, baila como si tuviera dos pies izquierdos pero tiene ojos bonitos.
+        Cuando sonríe, el sol brilla. Casi nunca lo hace, por eso llueve tanto.
+        Nos gusta programar juntos hasta el amanecer, en silencio, porque cuando calla parece como ausente.
+        La quiero mucho, que nunca cambie, que no me olvide.
+        Tono preferido: poético.
     """
 
     text: str = Assistant.generate(
         provider,
-        TiktokScript(),
+        ShortLovePoem(),
         prompt
     )
 
@@ -70,4 +69,27 @@ if __name__ == "__main__":
     #     y cantidad de personas. El programa debe mostrar el valor total de la cuenta real,
     #     el valor total de la cuenta con el impuesto y el valor que le corresponde pagar
     #     a cada persona.
+    # """
+
+
+
+    # prompt: str = """
+    #     Mostrar de forma atractiva la vida de un ingeniero de sistemas.
+    #     Incluir escenas visuales dinámicas (como trabajar con código, reuniones,
+    #     resolver problemas, etc.), y debe usar sonidos o música que estén en tendencia.
+    #     El tono debe ser inspirador pero accesible, mostrando que la ingeniería de
+    #     sistemas no es solo técnica, sino también creativa y emocionante.
+    #     Finaliza con una llamada a la acción que invite a estudiar esta profesión.
+    #     El contenido debe ser adecuado para jóvenes que están eligiendo qué carrera
+    #     seguir.
+    # """
+
+
+    # prompt: str = """
+    #     Nombre de mi novia: Vaca Neria
+    #     Ella es muy pequeñita, amable, baila como si tuviera dos pies izquierdos pero tiene ojos bonitos.
+    #     Cuando sonríe, el sol brilla. Casi nunca lo hace, por eso llueve tanto.
+    #     Nos gusta programar juntos hasta el amanecer, en silencio, porque cuando calla parece como ausente.
+    #     La quiero mucho, que nunca cambie, que no me olvide.
+    #     Tono preferido: poético.
     # """

@@ -1,5 +1,4 @@
 from src.content_generation_assistant.content_type import ContentType
-from src.ia.providers.provider import Provider
 
 class TiktokScript(ContentType):
     def __init__(self):
@@ -12,7 +11,7 @@ class TiktokScript(ContentType):
         return "Guion para TikTok"
 
     def get_description(self) -> str:
-        return "Genera un guion para TikTok que sea atractivo y divertido, con un enfoque en la creatividad y la originalidad. El guion debe ser breve y directo, ideal para el formato de TikTok, y debe incluir elementos visuales y auditivos que lo hagan más interesante. El contenido debe ser apropiado para la audiencia de TikTok y seguir las tendencias actuales de la plataforma."
+        return "Genera un guion para TikTok que sea atractivo y divertido, con un enfoque en la creatividad y la originalidad. El guion debe ser breve y directo, ideal para el formato de TikTok, y debe incluir elementos visuales y auditivos que lo hagan más interesante. El contenido debe ser apropiado para la audiencia de TikTok y seguir las tendencias actuales de la plataforma"
 
     def get_example(self) -> str:
         return """
@@ -33,4 +32,3 @@ class TiktokScript(ContentType):
 
     def get_preferred_temperature(self) -> float:
         return 0.8
-        # return Provider.MAX_TEMPERATURE

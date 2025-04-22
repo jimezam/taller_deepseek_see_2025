@@ -7,7 +7,7 @@ class Assistant:
     def generate(cls, provider: Provider, content_type: ContentType, prompt: str) -> str:
 
         try:
-            provider.temperature = content_type.get_preferred_temperature()
+            provider.temperature = provider.get_max_temperature() if content_type.get_preferred_temperature() == Provider.MAX_TEMPERATURE else content_type.getpreferred_temperature()
         except ValueError as e:
             raise ValueError(f"Invalid temperature value: {e} for {provider.get_provider_name()} range is ({provider.get_min_temperature()}, {provider.get_max_temperature()})")
 
@@ -15,6 +15,5 @@ class Assistant:
 
 
 
-# - c'odigo fuente
 # - post para facebook
 # - guion para tiktok

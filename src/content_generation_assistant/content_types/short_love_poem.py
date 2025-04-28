@@ -15,8 +15,10 @@ class ShortLovePoem(ContentType):
         return "Genera un poema corto de amor"
 
     def get_example(self) -> str:
-        return """
-        """
+        return """Recuerdo un amor lejano, alguien que fue muy especial pero 
+que ahora solo vive en los recuerdos. Su nombre era Pepita Pimentón, una persona
+que solía caminar conmigo bajo la lluvia, compartiendo risas y sueños, pero que 
+el destino separó para siempre."""
 
     def get_context(self) -> str:
         return """

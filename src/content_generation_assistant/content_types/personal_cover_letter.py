@@ -14,16 +14,10 @@ class PersonalCoverLetter(ContentType):
         return "Crea una carta de presentación personal para un puesto de trabajo específico"
 
     def get_example(self) -> str:
-        return """Mi nombre es Pepito Pimentón, soy ingeniero de sistemas 
-mi fuerte es el desarrollo de software y creo que la gestion es para gente rara
-que no pudo aprender a programar.  He trabajado en varias empresas a nivel nacional
-tanto desarrollando software como ofreciendo consultoria.  En general me gusta que
-me paguen mucho y tenga poco trabajo que hacer porque casi siempre tengo mucho sueño,
-sin embargo las pocas horas en que estoy despierto soy un prolífico desarrollador,
-me gusta participar de manera activa y constructiva en discusiones tecnicas e
-involucrarme con la toma de decisiones importantes mientras no haya que ir a
-reuniones.  Tambien me gusta asesorar a otros desarrolladores y compartir mis
-conocimientos desde que estos no sean muy malos y hagan por lo menos un esfuerzo."""
+        return """Mi nombre es Pepe, estoy interesado en el puesto de Gerente 
+General en ACME.  Tengo experiencia en lavar, cocinar y planchar, y cuento con 
+habilidades como quejarme sólo lo necesario, oler rico y bañarme por las 
+mañanas."""
 
     def get_context(self) -> str:
         return """Eres un redactor profesional, tu tarea es redactar una carta de

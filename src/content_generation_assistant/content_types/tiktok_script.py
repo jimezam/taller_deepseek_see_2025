@@ -11,11 +11,14 @@ class TiktokScript(ContentType):
         return "Guion para TikTok"
 
     def get_description(self) -> str:
-        return "Genera un guion para TikTok que sea atractivo y divertido, con un enfoque en la creatividad y la originalidad. El guion debe ser breve y directo, ideal para el formato de TikTok, y debe incluir elementos visuales y auditivos que lo hagan más interesante. El contenido debe ser apropiado para la audiencia de TikTok y seguir las tendencias actuales de la plataforma"
+        return "Genera un guion para TikTok que sea atractivo, divertido y que las tendencias actuales de la plataforma"
 
     def get_example(self) -> str:
-        return """
-        """
+        return """Un creador de contenido de programación llamado Alex, conocido por 
+su humor sarcástico y su estilo único, quiere promocionar un producto llamado 
+"GlowSnack", una barra de energía que brilla en la oscuridad. La finalidad del video 
+es entretener y generar curiosidad sobre el producto, mientras se mantiene el tono 
+humorístico característico de Alex."""
 
     def get_context(self) -> str:
         return """

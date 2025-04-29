@@ -57,6 +57,24 @@ Instalar las librerías requeridas.
 $ pip install -r requirements.txt
 ```
 
+Crear el archivo de configuración.
+
+```
+$ cp .env example .env
+```
+
+Editar el archivo `.env` y complementar la siguiente información.
+
+- DEEPSEEK_API_KEY  
+  DEEPSEEK_BASE_URL  
+  DEEPSEEK_MODEL
+
+- MISTRAL_API_KEY  
+  MISTRAL_MODEL
+
+- ANTHROPIC_API_KEY  
+  ANTHROPIC_MODEL
+
 Ejecutar la aplicación a través de la interfaz web (Streamlit).
 
 ```

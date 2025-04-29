@@ -60,7 +60,7 @@ $ pip install -r requirements.txt
 Crear el archivo de configuración.
 
 ```
-$ cp .env example .env
+$ cp .env.example .env
 ```
 
 Editar el archivo `.env` y complementar la siguiente información.

@@ -83,6 +83,22 @@ $ streamlit run main.py
 
 Abrir un navegador y acceder a la URL `http://localhost:8501` o la que indique el servicio.
 
+## Interfaz de usuario
+
+La interfaz de usuario se encuentra dividida en dos partes, la barra lateral (izquierda) y el contenido (centro).
+
+En la barra lateral, el usuario puede elegir el proveedor de IA y el tipo de contenido que desea utilizar para la generación del contenido.
+
+En la parte central, el usuario puede **proveer del contexto** necesario para complementar la generación del tipo de contenido solicitado.  **No es necesario escribir el prompt**, este viene definido por el tipo de contenido elegido.
+
+![Imagen #1](/docs/images/screenshot-1.png)
+
+En la parte central inferior se puede apreciar la descripción y un ejemplo del tipo de contenido elegido.
+
+Una vez se solicita la generación de contenido, esta es mostrada en la interfaz como se muestra a continuación.
+
+![Imagen #1](/docs/images/screenshot-2.png)
+
 ## Diseño
 
 se utilizaron los siguientes patrones de diseño para el desarrollo de esta aplicación.
@@ -139,6 +155,6 @@ De manera similar, es posible agregar nuevos tipos de contenido creando nuevas c
     │       ├── mistral
     │       │   └── mistral_provider.py
     │       └── provider.py - clase base para los proveedores de IA
-    └── ui.py
+    └── ui.py - interfaz de usuario web
 ```
 

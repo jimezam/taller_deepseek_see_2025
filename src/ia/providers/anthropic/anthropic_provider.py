@@ -16,7 +16,6 @@ class AnthropicProvider(Provider):
         return 1.0
 
     def get_client(self) -> anthropic:
-        print(self.get_config("API_KEY"))
         return anthropic.Anthropic(
             api_key=self.get_config("API_KEY")
         )
